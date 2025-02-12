@@ -5,7 +5,11 @@ const app = express();
 const PORT = 3001;
 
 // Middleware
-app.use(cors()); // Permite requesturi din frontend
+app.use(cors({
+    origin: 'https://behave-client.onrender.com', // Allow requests from your frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true, // Allow cookies and credentials
+}));
 app.use(express.json()); // Permite procesarea JSON-ului
 
 // Datele produselor (stocate în memorie)
