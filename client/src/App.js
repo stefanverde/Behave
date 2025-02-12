@@ -89,40 +89,47 @@ function App() {
                 })}
                 </tbody>
             </table>
-            <h2>Add New Product</h2>
-            <form onSubmit={handleAddProduct}>
-                <label>
-                    Name:
-                    <input
-                        type="text"
-                        name="name"
-                        value={newProduct.name}
-                        onChange={handleInputChange}
-                        required
-                    />
-                </label>
-                <label>
-                    Our Price:
-                    <input
-                        type="text"
-                        name="our_price"
-                        value={newProduct.our_price}
-                        onChange={handleInputChange}
-                        required
-                    />
-                </label>
-                <label>
-                    Competitor Price:
-                    <input
-                        type="text"
-                        name="competitor_price"
-                        value={newProduct.competitor_price}
-                        onChange={handleInputChange}
-                        required
-                    />
-                </label>
-                <button type="submit">Add Product</button>
-            </form>
+            <div className="add-product-form">
+                <h2>Add New Product</h2>
+                <form onSubmit={handleAddProduct}>
+                    <div className="form-group">
+                        <label htmlFor="name">Name:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={newProduct.name}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="our_price">Our Price:</label>
+                        <input
+                            type="text"
+                            id="our_price"
+                            name="our_price"
+                            value={newProduct.our_price}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="competitor_price">Competitor Price:</label>
+                        <input
+                            type="text"
+                            id="competitor_price"
+                            name="competitor_price"
+                            value={newProduct.competitor_price}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="submit-button">
+                        Add Product
+                    </button>
+                </form>
+            </div>
         </div>
     );
 }
