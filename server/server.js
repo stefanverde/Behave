@@ -40,7 +40,7 @@ app.get("/api/products", (req, res) => {
 });
 app.post("/api/productsDyn", (req, res) => {
     const newProduct = {
-        id: dynamicProducts.length + 1, // Simple ID generation
+        id: products.length + dynamicProducts.length + 1, // Simple ID generation
         ...req.body,
     };
     dynamicProducts.push(newProduct);
