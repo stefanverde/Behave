@@ -8,7 +8,7 @@ function App() {
 
     // Fetch data from backend
     useEffect(() => {
-        fetch("https://behave-backend.onrender.com/api/products")
+        fetch("https://behave-kvfq.onrender.com/api/products")
             .then((response) => response.json())
             .then((data) => {
                 setProducts(data);
